@@ -1,0 +1,110 @@
+
+.loginpage
+{
+    width:650px;
+    padding:12% 0 0;
+    margin:auto;
+    border-style:1px solid black;
+    
+}
+.form p
+{
+    font-family:"roboto",sans-serif;
+    text-transform:uppercase;
+    outline:0;
+    background:transparent;
+    width:100%;
+    height:40px;
+    margin-top:0px;
+    border:0;
+    padding-top:0px;
+    color:black;
+    font-size:15px;
+    cursor:pointer;
+    text-align:left;
+
+}
+
+.form
+{
+   
+position: relative;
+z-index:1;
+background:white;
+max-width:900px; 
+margin:0 auto 100px;
+padding:45px;
+text-align:center;
+border:1px solid black;
+}
+.form input
+{
+font-family:"roboto",sans-serif;
+outline: 1;
+background:#f2f2f2;
+width:100%;
+border: 0;
+margin:0 0 15px;
+padding:15px;
+box-sizing:border-box;
+font-size:14px;
+}
+.form button
+{
+    font-family:"roboto",sans-serif;
+    text-transform:uppercase;
+    outline:0;
+    background:#4caf50;
+    width:25%;
+    border:0;
+    padding:15px;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+}
+.form button:hover,.form button:active
+{
+background:#43a047;
+}
+.form.message
+{
+    margin:15px 0 0;
+    color:white;
+    font-size:12px;
+}
+.form.message a
+{
+    color:#4caf50;
+    text-decoration:none;
+}
+#rgstr_btn
+{
+    font-family:"roboto",sans-serif;
+    text-transform:uppercase;
+    outline:0;
+    background:#4caf50;
+    width:25%;
+    border:0;
+    padding:15px;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    
+}
+#login_btn
+{
+    font-family:"roboto",sans-serif;
+    text-transform:uppercase;
+    outline:0;
+    background:#4caf50;
+    width:25%;
+    border:0;
+    padding:15px;
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    
+}
+a{
+    color:white;
+}
