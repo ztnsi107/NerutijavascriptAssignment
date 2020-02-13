@@ -7,8 +7,8 @@
 <body>
     <div class="loginpage">
         <div class="form">
-    <form id="register-form" onsubmit="return store()" >
-        <h3>Create Account Here</h3>
+    <form id="register-form" >
+        <h1>Create Account Here</h1>
     <p>Enter Name :</p>
     <input id="usname" type="text" name=usname" placeholder="Enter user Here" onblur="usvalid()"><br>
     <label id=lbl4 style="color:red;visibility:hidden">Invalid</label><br>
@@ -25,9 +25,11 @@
     <p> Enter Confirm Password: </p>
     <input id="cpw" type="password" name=username" placeholder="Enter Password Here" onsubmit="confirmpassword()" ><br>
     <label id=lbl3 style="color:red;visibility:hidden">Invalid</label><br>
-    <button type="reset">Clear Form</button>
-  <button><a href="login.html" style="text-decoration:none" color="white">Login</a></button>
-    <input id="rgstr_btn" type="submit" value="registration" /> 
+    <input id="rgstr_btn" type="button" value="Registration" onclick="store()" /> 
+    
+  <a href="login.html" style="text-decoration:none" color="white">Already Registered login Here</a>
+   
+    <hr>
 </div>
 </div>
 

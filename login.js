@@ -5,12 +5,13 @@ function check() {
     var storedPw = localStorage.getItem('ppw');
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
-
+    
    
     if(userName.value == storedName && userPw.value == storedPw) 
     {
+        
     
-        return true;
+    return true;
     }
     else {
         document.getElementById("lbl9").innerHTML="username or password do not match";
