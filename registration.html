@@ -1,0 +1,158 @@
+<html>
+<head>
+    <script type="text/javascript" src="registration.js"></script>
+    <script type="text/javascript" language="javascript" src="login.js"></script>
+    <link rel="stylesheet" href="jstyle.css">
+</head>
+<body>
+    <div class="loginpage">
+        <div class="form">
+    <form id="register-form" >
+        <h1>Create Account Here</h1>
+    <p>Enter Name :</p>
+    <input id="usname" type="text" name=usname" placeholder="Enter user Here" onblur="usvalid()"><br>
+    <label id=lbl4 style="color:red;visibility:hidden">Invalid</label><br>
+    <p>Enter Email ID :</p>
+    <input id="uemail" type="text" name=email" placeholder="Enter Email ID Here" onblur="validation()"><br>
+    <label id=lbl1 style="color:red;visibility:hidden">Invalid</label>
+    <br>
+    <p> Enter Username :</p>
+    <input id="pname" type="text" name=username" placeholder="Enter username Here" value="" onblur="usnvalidation()"/><br>
+    <label id=lbl5 style="color:red;visibility:hidden">Invalid</label><br>
+    <p> Enter Password: </p>
+    <input id="ppw" type="password" placeholder="Enter Password Here" value="" onblur="pvalidation()"/><br>
+    <label id=lbl2 style="color:red;visibility:hidden">Invalid</label><br>
+    <p> Enter Confirm Password: </p>
+    <input id="cpw" type="password" name=username" placeholder="Enter Password Here" onsubmit="confirmpassword()" ><br>
+    <label id=lbl3 style="color:red;visibility:hidden">Invalid</label><br>
+    <input id="rgstr_btn" type="button" value="Registration" onclick="store()" /> 
+    
+  <a href="login.html" style="text-decoration:none" color="white">Already Registered login Here</a>
+   
+    <hr>
+</div>
+</div>
+
+    </form>
+    
+    <script>
+
+     function validation()
+    {
+        var text=document.getElementById("uemail").value;
+        var reg= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      
+    
+    if(reg.test(text))
+    {
+        console.log("valid");
+        document.getElementById("lbl1").innerHTML=" ";
+        document.getElementById("lbl1").style.visibility="hidden";
+        document.getElementById("lbl1").style.color="green";
+      
+       
+    }
+    else
+    {
+        
+        document.getElementById("lbl1").innerHTML="Invalid Email-id";
+        document.getElementById("lbl1").style.visibility="visible";
+        document.getElementById("lbl1").style.color="red";
+    }
+    }
+    function pvalidation()
+    {
+        var text=document.getElementById("ppw").value;
+        var reg=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+        
+    
+    if(reg.test(text))
+    {
+        
+        document.getElementById("lbl2").innerHTML="";
+        document.getElementById("lbl2").style.visibility="hidden";
+        document.getElementById("lbl2").style.color="green";
+       
+    }
+    
+    else
+    {
+        
+        document.getElementById("lbl2").innerHTML="password must contain 1 special character,1 alphabate 1 number and length must be 8 character";
+        document.getElementById("lbl2").style.visibility="visible";
+        document.getElementById("lbl2").style.color="red";
+    }
+    }
+    
+    function usvalid()
+    {
+        var text1=document.getElementById("usname").value;
+        var reg=/[^A-Za-z]+$/;
+        
+    
+        if(reg.test(text1))
+        
+    {
+        document.getElementById("lbl4").innerHTML="Wrong Name";
+        document.getElementById("lbl4").style.visibility="visible";
+        document.getElementById("lbl4").style.color="red";
+        
+    }
+    else
+    {
+        document.getElementById("lbl4").innerHTML="";
+        document.getElementById("lbl4").style.visibility="hidden";
+        document.getElementById("lbl4").style.color="green";
+        
+    }
+    }
+    function usnvalidation()
+    {
+        var text=document.getElementById("pname").value;
+        var reg=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+        
+    
+    if(reg.test(text))
+    {
+        
+        document.getElementById("lbl5").innerHTML="";
+        document.getElementById("lbl5").style.visibility="hidden";
+        document.getElementById("lbl5").style.color="green";
+       
+    }
+    else
+    {
+        
+        document.getElementById("lbl5").innerHTML="UserName must contain 1 special character,1 alphabate 1 number and length must be 8 character";
+        document.getElementById("lbl5").style.visibility="visible";
+        document.getElementById("lbl5").style.color="red";
+    }
+}
+function confirmpassword()
+{
+
+        var text1=document.getElementById("ppw").value;
+        var text2=document.getElementById("cpw").value;
+       
+    console.log(text1 +"---" + text2);
+
+    if(text1 != text2)
+    {
+    
+        document.getElementById("lbl3").innerHTML="password do not match";
+        document.getElementById("lbl3").style.visibility="visible";
+        document.getElementById("lbl3").style.color="red";
+    }
+    else
+    {
+        document.getElementById("lbl3").innerHTML="";
+        document.getElementById("lbl3").style.visibility="hidden";
+        document.getElementById("lbl3").style.color="green";
+    }
+}
+
+</script>
+    
+</body>
+</html>
+       
